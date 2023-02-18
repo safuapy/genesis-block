@@ -73,7 +73,7 @@ def create_output_script(pubkey):
 
 def create_transaction(input_script, output_script,options):
   transaction = Struct("transaction",
-    Bytes("version", 4),
+    Bytes("version", 11),
     Byte("num_inputs"),
     StaticField("prev_output", 32),
     UBInt32('prev_out_idx'),
